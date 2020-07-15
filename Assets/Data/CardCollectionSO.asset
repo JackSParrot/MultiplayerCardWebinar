@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d4e09d10c40454eba2256e72c6b84c, type: 3}
+  m_Name: CardCollectionSO
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 8009643126675226297, guid: 375f1c9602118bb4dac5da264dc3fd32, type: 3}
+  Cards:
+  - Title: Useless zombie
+    Image: {fileID: 21300000, guid: 36c422b9ec7a3164fb837dc110a89c14, type: 3}
+    Attack: 0
+    Health: 20
+  - Title: Angry Dwarf
+    Image: {fileID: 21300000, guid: 7eca5eb76d1a9e4429a044ab8ff7efc6, type: 3}
+    Attack: 1
+    Health: 19
+  - Title: Behemoth
+    Image: {fileID: 21300000, guid: 8d68bf6b48ccb7a4e833f51e08feec5c, type: 3}
+    Attack: 2
+    Health: 18
+  - Title: Distracted Minotaur
+    Image: {fileID: 21300000, guid: c9167afd650254746a356272a61b3438, type: 3}
+    Attack: 3
+    Health: 17
+  - Title: Infernal Dogo
+    Image: {fileID: 21300000, guid: a02f1670c123920408878691900a2ddc, type: 3}
+    Attack: 4
+    Health: 16
+  - Title: Mean Dwarf
+    Image: {fileID: 21300000, guid: f34469d454278ad43868661ccd440325, type: 3}
+    Attack: 5
+    Health: 15
+  - Title: Hot Elemental
+    Image: {fileID: 21300000, guid: 37db3613ed51d024188d1cae32d3e59a, type: 3}
+    Attack: 6
+    Health: 14
+  - Title: Cool Elemental
+    Image: {fileID: 21300000, guid: c1980abec00da2d4881407f8f33a2464, type: 3}
+    Attack: 7
+    Health: 13
+  - Title: Serious Wizzard
+    Image: {fileID: 21300000, guid: faec8b309a13fa94ab34b7e790aebc17, type: 3}
+    Attack: 8
+    Health: 12
+  - Title: Heavy Dwarf
+    Image: {fileID: 21300000, guid: 7750fc70c5e3fec47b59ceee22f6c926, type: 3}
+    Attack: 9
+    Health: 11
+  - Title: Funny Wizzard
+    Image: {fileID: 21300000, guid: 6a964007a3276914290a500d00b04763, type: 3}
+    Attack: 10
+    Health: 10
+  - Title: Magestuous Wizzard
+    Image: {fileID: 21300000, guid: b1b6cd174ae30b940bd7870bae069132, type: 3}
+    Attack: 11
+    Health: 9
+  - Title: Aggresive Dogo
+    Image: {fileID: 21300000, guid: 8c7a13a35a86dc44ab40de9d93374d78, type: 3}
+    Attack: 12
+    Health: 8
+  - Title: Badass Amazon
+    Image: {fileID: 21300000, guid: a814940e47504874d8027a860d5bc5e2, type: 3}
+    Attack: 13
+    Health: 7
+  - Title: Aggressive Amazon
+    Image: {fileID: 21300000, guid: 1ee0179d1f9b0874693d43ddb6cdd811, type: 3}
+    Attack: 14
+    Health: 6
+  - Title: Sniper Amazon
+    Image: {fileID: 21300000, guid: a32eb60562a87cc41b5a9248cf83bf8b, type: 3}
+    Attack: 15
+    Health: 5
+  - Title: Flying Zombie
+    Image: {fileID: 21300000, guid: a1f616cae7ad9e14ba2341f2d9ecda54, type: 3}
+    Attack: 16
+    Health: 4
+  - Title: Flaming Dogo
+    Image: {fileID: 21300000, guid: 98de9660dcd60814bbcab03c3d809c49, type: 3}
+    Attack: 17
+    Health: 3
+  - Title: Driller Dwarf
+    Image: {fileID: 21300000, guid: ba725d29d5acae34491f20ef798aad04, type: 3}
+    Attack: 18
+    Health: 2
+  - Title: Exalted Wizzard
+    Image: {fileID: 21300000, guid: 091b2135c0b86454296b372411772597, type: 3}
+    Attack: 19
+    Health: 1
