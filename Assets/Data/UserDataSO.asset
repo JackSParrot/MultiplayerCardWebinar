@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c2076a863834dc5a5cead2d1428867, type: 3}
   m_Name: UserDataSO
   m_EditorClassIdentifier: 
-  _playerId: u1748197727
+  _playerId: 
   _playerName: 
-  _playerDeck: 0000000001000000020000000300000004000000050000000600000007000000
+  _playerDeck: 

@@ -8,16 +8,23 @@ public class UserDataSO : ScriptableObject
 {
     [SerializeField]
     string _playerId = "";
+
+    [SerializeField]
+    string _playerName = "";
+
+    [SerializeField]
+    List<int> _playerDeck = new List<int>();
+
     public string PlayerId
     {
         get
         {
             if(string.IsNullOrEmpty(_playerId))
             {
-                if (!PlayerPrefs.HasKey("ID") || PlayerPrefs.GetString("ID") == "")
+                if (!PlayerPrefs.HasKey("ID") || string.IsNullOrEmpty(PlayerPrefs.GetString("ID")))
                 {
                     int seconds = (int)((DateTime.UtcNow - new DateTime(2000, 1, 1)).TotalMilliseconds % int.MaxValue);
-                    PlayerPrefs.SetString("ID", "u" + seconds.ToString());
+                    PlayerPrefs.SetString("ID", "u" + seconds.ToString() + UnityEngine.Random.Range(0, 1000).ToString());
                 }
                 _playerId = PlayerPrefs.GetString("ID");
             }
@@ -30,8 +37,6 @@ public class UserDataSO : ScriptableObject
         }
     }
 
-    [SerializeField]
-    string _playerName = "";
     public string PlayerName
     {
         get
@@ -52,8 +57,6 @@ public class UserDataSO : ScriptableObject
         }
     }
 
-    [SerializeField]
-    List<int> _playerDeck = new List<int>();
     public List<int> PlayerDeck
     {
         get
@@ -71,9 +74,30 @@ public class UserDataSO : ScriptableObject
                         }
                     }
                 }
+                else
+                {
+                    for(int i = 0; i < 8; ++i)
+                    {
+                        _playerDeck.Add(i);
+                    }
+                    Save();
+                }
             }
             return _playerDeck;
         }
+    }
+
+    public void SetDeck(List<int> newDeck)
+    {
+        _playerDeck.Clear();
+        _playerDeck.AddRange(newDeck);
+    }
+
+    void OnEnable()
+    {
+        _playerDeck = new List<int>();
+        _playerId = "";
+        _playerName = "";
     }
 
     public void Reset()
@@ -99,8 +123,8 @@ public class UserDataSO : ScriptableObject
             PlayerPrefs.SetString("Deck", str);
             Debug.Log("Saved: " + str);
 
-            const string url = "#your_save_url_here#";
-            var fullUrl = url + $"?uid={PlayerId}&name={ PlayerName}&deck={str}";
+            const string url = "http://link_a_tu_save_user";
+            var fullUrl = url + $"?uid={PlayerId}&name={PlayerName}&deck={str}";
             var request = new UnityWebRequest(fullUrl, "GET", new DownloadHandlerBuffer(), null);
             request.redirectLimit = 50;
             request.timeout = 60;

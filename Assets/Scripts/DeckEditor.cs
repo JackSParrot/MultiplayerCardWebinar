@@ -13,6 +13,7 @@ public class DeckEditor : MonoBehaviour
 
     void Start()
     {
+        _selected.Clear();
         _selected.AddRange(UserData.PlayerDeck);
         for(int i = 0; i < Holders.Count; ++i)
         {
@@ -51,8 +52,7 @@ public class DeckEditor : MonoBehaviour
     {
         if(_selected.Count == 8)
         {
-            UserData.PlayerDeck.Clear();
-            UserData.PlayerDeck.AddRange(_selected);
+            UserData.SetDeck(_selected);
             UserData.Save();
         }
         else

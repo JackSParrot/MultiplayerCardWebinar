@@ -40,7 +40,7 @@ public class MenuHandler : MonoBehaviour
         Loading.SetActive(true);
         PvPButton.SetActive(false);
 
-        const string url = "#your_load_url_here#";
+        const string url = "http://link_a_tu_load_user";
         var fullUrl = url + $"?uid={UserData.PlayerId}";
         var request = new UnityWebRequest(fullUrl, "GET", new DownloadHandlerBuffer(), null);
         request.redirectLimit = 50;
